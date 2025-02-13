@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "WeChat miniprogram demo",
   "scripts": {
-    "init": "npm run sync && cd cloudfunctions/ && npm i --production && cd ../miniprogram/ && npm i --production",
+    "init": "npm run sync && cd cloudfunctions/ && npm i --production --legacy-peer-deps && cd ../miniprogram/ && npm i --production --legacy-peer-deps",
     "lint": "eslint .",
     "wxss:transform-vars": "gulp transform-css-vars",
     "sync": "git submodule update --init --recursive",
@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/wechat-miniprogram/miniprogram-demo#readme",
   "devDependencies": {
-    "@tencent/eslint-config-wxapp": "^0.5.2",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
     "babel-eslint": "^10.1.0",
